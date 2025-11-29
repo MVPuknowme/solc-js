@@ -70,6 +70,6 @@ getVersionList(function (list) {
     console.log('Version list is invalid or corrupted?');
     process.exit(1);
   }
-  const expectedHash = expectedFile.keccak256;
+  const expectedHash = expectedFile.sha256;
   downloadBinary('soljson.js', releaseFileName, expectedHash);
 });
